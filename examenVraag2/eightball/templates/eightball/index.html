@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Eightball app</title>
+</head>
+<body>
+    <h3>Eightball</h3>
+
+    <form method="post" action="{% url 'eightball:anwser' %}">
+        {% csrf_token %}
+        <label>Question:</label>
+        <input type="text" name="question" id="question" /><br><br>
+        <input type="submit" value="Ask question" />
+    </form>
+</body>
+</html>

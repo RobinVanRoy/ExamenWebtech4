@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Anwser page</title>
+</head>
+<body>
+    {% if anwser  %}
+    <h4>{{ anwser }}</h4>
+    {% endif %}
+    <a href={% url 'eightball:index' %}>Home</a>
+</body>
+</html>
