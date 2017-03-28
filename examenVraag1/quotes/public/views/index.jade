@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  div.well
+    h4 Search Quotes
+    br
+    form(method="POST")
+        div.input
+            span.label Search:
+            input(type="text", name="search_input")
+        div.actions
+            input(type="submit", value="Search")
+    br
+    br
+    h4 Add quote
+    form(method="POST")
+        div.input
+            span.label Quote:
+            input(type="text", name="quote_input")
+        div.actions
+            input(type="submit", value="Add")

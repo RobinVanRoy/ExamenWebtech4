@@ -1,0 +1,12 @@
+doctype html
+html
+  head
+    title= "Quotes"
+  body
+      ul
+          for quote in quotes
+              li= quote
+          else
+              li sorry, no quotes!
+
+      a(href='/index') Overview
