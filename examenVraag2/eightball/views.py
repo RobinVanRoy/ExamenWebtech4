@@ -1,4 +1,3 @@
-from django.views import generic
 from django.shortcuts import render
 import random
 
@@ -30,7 +29,12 @@ def anwser(request):
         if value == question:
             i = str.split(q, ':')[1]
             anwsers = r.smembers('antwoord:' + i)
-            anwser = random.choice(anwsers)
+            anwsers_list = []
+            for a in anwsers:
+                anwsers_list.append(a)
+            print (anwsers_list)
+            # anwser = random.choice(anwsers_list)
+            anwser = anwsers_list[0]
             context = {'anwser': anwser}
 
     return render(request, 'eightball/anwser.html', context)

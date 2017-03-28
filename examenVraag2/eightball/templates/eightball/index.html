@@ -7,7 +7,7 @@
 <body>
     <h3>Eightball</h3>
 
-    <form method="post" action="{% url 'eightball:anwser' %}">
+    <form action="{% url 'eightball:anwser' %}" method="post">
         {% csrf_token %}
         <label>Question:</label>
         <input type="text" name="question" id="question" /><br><br>
